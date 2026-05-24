@@ -24,3 +24,5 @@ jobs:
           context: .
           push: true
           tags: darribv/express-pipeline-app:latest
+      - name: Trigger Render Deploy
+        run: curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
