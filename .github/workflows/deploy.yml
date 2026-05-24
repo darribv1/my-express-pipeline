@@ -23,5 +23,4 @@ jobs:
         with:
           context: .
           push: true
-          # ВНИМАНИЕ: Замени ниже 'твой_логин_docker' на свой реальный логин в Docker Hub!
           tags: darribv/express-pipeline-app:latest
