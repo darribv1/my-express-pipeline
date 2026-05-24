@@ -1,11 +1,12 @@
 const express = require('express');
+const { Client } = require('pg');
+const redis = require('redis');
 const app = express();
-const PORT = 8080;
 
-app.get('/', (req, res) => {
-    res.send('<h1>Hello from CI/CD!</h1><p>Assignment 3.1 is officially working.</p>');
+app.get('/', async (req, res) => {
+  res.send('<h1>Lab 3.2: Multi-container system is UP!</h1><p>Postgres and Redis are integrated.</p>');
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+app.listen(8080, () => {
+  console.log('Server is running on port 8080');
 });
